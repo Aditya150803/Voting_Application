@@ -1,0 +1,45 @@
+                                               Voting Application                                                            
+------------------------------------------------------------------------------------------------------------------------------
+
+WHAT TO DO ???
+---------------
+A functioality where user can vote to the one among the given set of candidates once.
+
+WHAT TO CODE ???
+----------------
+MODELS
+ROUTES
+
+APP FUNCTIONALITY
+------------------
+1. user sign up/sign in
+2. to show the list of candidates
+3. users can vote one of the candidates. once voted they can't vote again.
+4. there is a route which shows the live vote counts of different candidates sorted by their vote counts
+5. users can be able to log in by their unique govt. id number i.e AADHAAR NUMBER & password
+6. users can update their password.
+7. there must be one admin who will manage the tables of candidates data and he can't vote. 
+
+ROUTES
+------
+User Authentication:
+    /signup: POST - Create a new account  
+    /login: POST - Log in to an existing account
+
+Voting: 
+    /candidates: GET - Get the list of candidates
+    /vote/:candidateId: POST - Vote for a specific candidate using his/her candidate ID 
+
+Vote Counts: 
+    /vote/counts: GET - Get the list of candidates sorted by their vote counts at real time
+
+User Profile: 
+    /profile: GET - Get the user's profile information
+    /profile/password: PUT - Update the user's password
+
+Admin Candidate Management: 
+    /candidate: POST - Create a new candidate account
+    /candidate/:candidateId: PUT - Update candidate's profile information
+    /candidate/:candidateId: DELETE - Delete a candidate's account
+
+----------------------------------------------------------------------------------------------------------------------------
