@@ -1,8 +1,12 @@
 //db.js file acts like a central module which manages the connection of MongoDB with local server using Mongoose. 
 const mongoose = require('mongoose');
+require('dotenv').config();
+
+// const mongoURL = process.env.MONGODB_URL_LOCAL;
+const mongoURL = process.env.MONGODB_URL;
 
 // Define MongoDB URL
-mongoose.connect("mongodb://127.0.0.1:27017/VotingApp", {
+mongoose.connect(mongoURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
