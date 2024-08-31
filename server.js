@@ -13,6 +13,9 @@ const userRouter = require('./Routes/userRouter');
 const candidateRouter = require('./Routes/candidateRouter');
 
 //Using the routers
+app.get('/', (req, res) =>{
+    res.send("Welcome to Aditya's Voting Application.")
+})
 app.use('/user', userRouter);
 app.use('/candidate', candidateRouter);
 
